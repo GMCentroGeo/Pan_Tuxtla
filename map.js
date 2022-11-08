@@ -48,7 +48,9 @@
 ///// /////////////////         FUNCION MOUSE OVER / MOUSE OUT
 
  function onEachFeature(feature, layer) {
-        layer.bindPopup("<b>" +feature.properties.nom_estab + "</b><br>");
+        layer.bindPopup("<br><b>Nombre :</b> "+
+		feature.properties.nom_estab+"<br><b> Colonia :</b> "+
+		feature.properties.nomb_asent);
         layer.on('mouseover', function(e) {
           this.openPopup();
         });
